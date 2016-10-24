@@ -28,7 +28,6 @@
                     <VisualState.Setters>
                         <Setter Target="Principal.Orientation" Value="Vertical"/>
                         <Setter Target="Borde.BorderThickness" Value="0,0,0,1"/>
-                        <!--<Setter Target="Borde.Grid.ColumnSpan" Value="1"/>-->
                         <Setter Target="Barra.Orientation" Value="Horizontal"/>
                         <Setter Target="Secundario.Grid.Column" Value="0"/>
                     </VisualState.Setters>
@@ -65,10 +64,7 @@
 
                 <ColumnDefinition Width="Auto"/>
             </Grid.ColumnDefinitions>
-            <VariableSizedWrapGrid 
-                               ItemWidth="300"
-                               ItemHeight="300">
-                <Rectangle Fill="Azure" 
+            <Rectangle Fill="Azure" 
                        Grid.Row="0" 
                        Grid.Column="0"    
                        Margin="5"/>
@@ -104,7 +100,6 @@
                        Grid.Row="2"
                        Grid.Column="2" 
                        Margin="5"/>
-        </VariableSizedWrapGrid>
         </Grid>
     </StackPanel>
 </Page>
