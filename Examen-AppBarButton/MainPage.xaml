@@ -30,26 +30,58 @@
                         <Setter Target="Barra.Orientation" Value="Horizontal"/>
                         <Setter Target="Borde.(RelativePanel.AlignBottomWithPanel)" Value="False"/>
                         <Setter Target="Borde.(RelativePanel.AlignRightWithPanel)" Value="True"/>
+                        
                         <Setter Target="Scroll.(RelativePanel.Below)" Value="Borde"/>
+                        <Setter Target="Scroll.(RelativePanel.AlignTopWithPanel)" Value="False"/>
+                        <Setter Target="Scroll.(RelativePanel.AlignBottomWithPanel)" Value="False"/>
+                        <Setter Target="Scroll.(RelativePanel.AlignLeftWithPanel)" Value="True"/>
+                        <Setter Target="Scroll.(RelativePanel.AlignRightWithPanel)" Value="True"/>
 
                         <Setter Target="Azure.(Grid.Row)" Value="0"/>
                         <Setter Target="Azure.(Grid.Column)" Value="0"/>
+                        <Setter Target="Azure.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Azure.(Grid.RowSpan)" Value="1"/>
+                        
                         <Setter Target="Blue.(Grid.Row)" Value="1"/>
                         <Setter Target="Blue.(Grid.Column)" Value="0"/>
+                        <Setter Target="Blue.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Blue.(Grid.RowSpan)" Value="1"/>
+                        
                         <Setter Target="Black.(Grid.Row)" Value="2"/>
                         <Setter Target="Black.(Grid.Column)" Value="0"/>
+                        <Setter Target="Black.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Black.(Grid.RowSpan)" Value="1"/>
+
                         <Setter Target="Wheat.(Grid.Row)" Value="3"/>
                         <Setter Target="Wheat.(Grid.Column)" Value="0"/>
+                        <Setter Target="Wheat.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Wheat.(Grid.RowSpan)" Value="1"/>
+                        
                         <Setter Target="Green.(Grid.Row)" Value="4"/>
                         <Setter Target="Green.(Grid.Column)" Value="0"/>
+                        <Setter Target="Green.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Green.(Grid.RowSpan)" Value="1"/>
+                        
                         <Setter Target="Orange.(Grid.Row)" Value="5"/>
                         <Setter Target="Orange.(Grid.Column)" Value="0"/>
+                        <Setter Target="Orange.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Orange.(Grid.RowSpan)" Value="1"/>
+                        
                         <Setter Target="Purple.(Grid.Row)" Value="6"/>
                         <Setter Target="Purple.(Grid.Column)" Value="0"/>
+                        <Setter Target="Purple.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Purple.(Grid.RowSpan)" Value="1"/>
+                        
                         <Setter Target="Brown.(Grid.Row)" Value="7"/>
                         <Setter Target="Brown.(Grid.Column)" Value="0"/>
+                        <Setter Target="Brown.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="Brown.(Grid.RowSpan)" Value="1"/>
+
                         <Setter Target="DarkGray.(Grid.Row)" Value="8"/>
                         <Setter Target="DarkGray.(Grid.Column)" Value="0"/>
+                        <Setter Target="DarkGray.(Grid.ColumnSpan)" Value="3"/>
+                        <Setter Target="DarkGray.(Grid.RowSpan)" Value="1"/>
+
                     </VisualState.Setters>
                 </VisualState>
             </VisualStateGroup>
@@ -71,90 +103,86 @@
             </StackPanel>
         </Border>
         <ScrollViewer VerticalScrollBarVisibility="Visible" 
-                      Name="Scroll">
-        <Grid>
-            <Grid.RowDefinitions>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-                <RowDefinition Height="*"/>
-            </Grid.RowDefinitions>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*"/>
+                      Name="Scroll"
+                      RelativePanel.RightOf="Borde"
+                      RelativePanel.AlignRightWithPanel="True"
+                      RelativePanel.AlignTopWithPanel="True"
+                      RelativePanel.AlignBottomWithPanel="True"
+                      >
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                    <RowDefinition Height="200"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
 
-                <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
 
-                <ColumnDefinition Width="*"/>
-            </Grid.ColumnDefinitions>
-            <Rectangle Name="Azure"
-                       Fill="Azure" 
-                       Grid.Row="0" 
-                       Grid.Column="0"
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Blue"
-                       Fill="Blue" 
-                       Grid.Row="0"
-                       Grid.Column="1"
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Black"
-                       Fill="Black"
-                       Grid.Row="0" 
-                       Grid.Column="2" 
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Wheat"
-                Fill="Wheat" 
-                       Grid.Row="1" 
-                       Grid.Column="0" 
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Green"
-                Fill="Green" 
-                       Grid.Row="1" 
-                       Grid.Column="1" 
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Orange"
-                Fill="Orange" 
-                       Grid.Row="1" 
-                       Grid.Column="2" 
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Purple"
-                Fill="Purple" 
-                       Grid.Row="2" 
-                       Grid.Column="0" 
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="Brown"
-                Fill="Brown" 
-                       Grid.Row="2"
-                       Grid.Column="1"  
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-            <Rectangle Name="DarkGray"
-                Fill="DarkGray" 
-                       Grid.Row="2"
-                       Grid.Column="2" 
-                       MinWidth="150"
-                       MinHeight="150"
-                       Margin="5"/>
-        </Grid>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Rectangle Name="Azure"
+                           Fill="Azure" 
+                           Grid.Row="0"
+                           Grid.RowSpan="3"
+                           Grid.Column="0"
+                           Margin="5"/>
+                <Rectangle Name="Blue"
+                           Fill="Blue" 
+                           Grid.Row="0"
+                           Grid.RowSpan="3"
+                           Grid.Column="1"
+                           Margin="5"/>
+                <Rectangle Name="Black"
+                           Fill="Black"
+                           Grid.Row="0" 
+                           Grid.RowSpan="3"
+                           Grid.Column="2" 
+                           Margin="5"/>
+                <Rectangle Name="Wheat"
+                    Fill="Wheat" 
+                           Grid.Row="3" 
+                           Grid.RowSpan="3"
+                           Grid.Column="0"
+                           Margin="5"/>
+                <Rectangle Name="Green"
+                    Fill="Green" 
+                           Grid.Row="3"  
+                           Grid.RowSpan="3"
+                           Grid.Column="1"
+                           Margin="5"/>
+                <Rectangle Name="Orange"
+                    Fill="Orange" 
+                           Grid.Row="3"   
+                           Grid.RowSpan="3"
+                           Grid.Column="2"
+                           Margin="5"/>
+                <Rectangle Name="Purple"
+                    Fill="Purple" 
+                           Grid.Row="6"  
+                           Grid.RowSpan="3"
+                           Grid.Column="0" 
+                           Margin="5"/>
+                <Rectangle Name="Brown"
+                    Fill="Brown" 
+                           Grid.Row="6"  
+                           Grid.RowSpan="3"
+                           Grid.Column="1"
+                           Margin="5"/>
+                <Rectangle Name="DarkGray"
+                    Fill="DarkGray" 
+                           Grid.Row="6"  
+                           Grid.RowSpan="3"
+                           Grid.Column="2" 
+                           Margin="5"/>
+            </Grid>
         </ScrollViewer>
     </RelativePanel>
 </Page>
